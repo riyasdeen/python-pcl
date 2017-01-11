@@ -71,35 +71,35 @@ if platform.system() == "Windows":
     # Python Version Check
     info = sys.version_info
 
-    if pcl_version == '-1.6':
-        # PCL 1.6.0 python Version == 3.4(>= 3.4?, 2.7 -> NG)
-        # Visual Studio 2010
-        if info.major == 3 and info.minor == 4:
-            pass
-        else:
-            print('no building Python Version')
-            sys.exit(1)
-    elif pcl_version == '-1.7':
-        # PCL 1.7.2 python Version >= 3.5
-        # Visual Studio 2015
-        if info.major == 3 and info.minor >= 5:
-            pass
-        else:
-            print('no building Python Version')
-            sys.exit(1)
-    elif pcl_version == '-1.8':
-        # PCL 1.8.0 python Version >= 3.5
-        # Visual Studio 2015
+	if pcl_version == '-1.6':
+		# PCL 1.6.0 python Version == 3.4(>= 3.4?, 2.7 -> NG)
+		# Visual Studio 2010
+		if info.major == 3 and info.minor == 4:
+			pass
+		else:
+			print('no building Python Version')
+			sys.exit(1)
+	elif pcl_version == '-1.7':
+		# PCL 1.7.2 python Version >= 3.5
+		# Visual Studio 2015
+		if info.major == 3 and info.minor >= 5:
+			pass
+		else:
+			print('no building Python Version')
+			sys.exit(1)
+	elif pcl_version == '-1.8':
+		# PCL 1.8.0 python Version >= 3.5
+		# Visual Studio 2015
 		if info.major == 3 and info.minor >= 5:
 			pass
 		elif info.major == 2 and info.minor >= 7:
 			pass
-        else:
-            print('no building Python Version')
-            sys.exit(1)
-    else:
-        print('pcl_version Unknown')
-        sys.exit(1)
+		else:
+			print('no building Python Version')
+			sys.exit(1)
+	else:
+		print('pcl_version Unknown')
+		sys.exit(1)
 
     # Add environment Value
     # os.environ["VS90COMNTOOLS"] = '%VS100COMNTOOLS%'
