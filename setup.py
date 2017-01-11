@@ -74,7 +74,7 @@ if platform.system() == "Windows":
     if pcl_version == '-1.6':
         # PCL 1.6.0 python Version == 3.4(>= 3.4?, 2.7 -> NG)
         # Visual Studio 2010
-        if info.major == 3 and info.minor == 4:
+        if info.major == 2 and info.minor == 7:
             pass
         else:
             print('no building Python Version')
