@@ -92,7 +92,7 @@ environment:
 
 branches: 
   only: 
-    - master 
+    - python27 
 
 
 install:
