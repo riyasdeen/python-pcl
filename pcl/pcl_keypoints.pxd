@@ -104,7 +104,7 @@ cdef extern from "pcl/keypoints/keypoint.h" namespace "pcl":
 # harris_3d.h (1.7.2)
 # template <typename PointInT, typename PointOutT, typename NormalT = pcl::Normal>
 # class HarrisKeypoint3D : public Keypoint<PointInT, PointOutT>
-cdef extern from "pcl/keypoints/harris_keypoint3D.h" namespace "pcl":
+cdef extern from "pcl/keypoints/harris_3d.h" namespace "pcl":
     cdef cppclass HarrisKeypoint3D[In, Out, NormalT](Keypoint[In, Out]):
         HarrisKeypoint3D ()
         # HarrisKeypoint3D (ResponseMethod method = HARRIS, float radius = 0.01f, float threshold = 0.0f)
@@ -366,7 +366,7 @@ ctypedef shared_ptr[UniformSampling[cpp.PointXYZRGBA]] UniformSampling_PointXYZR
 # harris_keypoint3D.h (1.6.0)
 # harris_3d.h (1.7.2)
 # template <typename PointInT, typename PointOutT, typename NormalT = pcl::Normal>
-cdef extern from "pcl/keypoints/harris_keypoint3D.h" namespace "pcl::HarrisKeypoint3D":
+cdef extern from "pcl/keypoints/harris_3d.h" namespace "pcl::HarrisKeypoint3D":
     ctypedef enum ResponseMethod2 "pcl::HarrisKeypoint3D::ResponseMethod":
         # typedef enum 
         RESPONSEMETHOD_HARRIS "pcl::HarrisKeypoint3D::HARRIS", 
