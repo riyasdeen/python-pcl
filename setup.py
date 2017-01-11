@@ -90,8 +90,10 @@ if platform.system() == "Windows":
     elif pcl_version == '-1.8':
         # PCL 1.8.0 python Version >= 3.5
         # Visual Studio 2015
-        if info.major == 3 and info.minor >= 5:
-            pass
+		if info.major == 3 and info.minor >= 5:
+			pass
+		elif info.major == 2 and info.minor >= 7:
+			pass
         else:
             print('no building Python Version')
             sys.exit(1)
